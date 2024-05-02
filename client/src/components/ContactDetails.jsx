@@ -99,7 +99,7 @@ function ContactDetails() {
   const fetchContact = async (page) => {
     try {
       const response = await axios.get(
-        `/api/v1/users/getcontacts?page=${page}&limit=${limit}`
+        `https://contacts-api-p91s.onrender.com/api/v1/users/getcontacts?page=${page}&limit=${limit}`
       );
       setContacts(response.data);
       console.log(response.data);
@@ -120,11 +120,15 @@ function ContactDetails() {
     formData.append("contactsFile", csvFile);
 
     try {
-      const response = await axios.post("/api/v1/users/upload", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const response = await axios.post(
+        "https://contacts-api-p91s.onrender.com/api/v1/users/upload",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
 
       console.log("Upload successful:", response.data);
       setCsvFile(null);
