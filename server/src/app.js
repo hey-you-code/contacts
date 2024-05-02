@@ -6,7 +6,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://contacts-beta-wine.vercel.app/",
+    origin: "https://contacts-beta-wine.vercel.app",
     credentials: true,
   })
 );
