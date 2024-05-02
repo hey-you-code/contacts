@@ -100,6 +100,7 @@ function ContactDetails() {
     try {
       const response = await axios.get(
         `https://contacts-api-p91s.onrender.com/api/v1/users/getcontacts?page=${page}&limit=${limit}`
+        // `http://localhost:9000/api/v1/users/getcontacts?page=${page}&limit=${limit}`
       );
       setContacts(response.data);
       console.log(response.data);
@@ -122,6 +123,7 @@ function ContactDetails() {
     try {
       const response = await axios.post(
         "https://contacts-api-p91s.onrender.com/api/v1/users/upload",
+        // "http://localhost:9000/api/v1/users/upload",
         formData,
         {
           headers: {
