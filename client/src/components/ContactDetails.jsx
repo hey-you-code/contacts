@@ -133,6 +133,7 @@ function ContactDetails() {
       );
 
       console.log("Upload successful:", response.data);
+      toast.success("Uploaded successfully");
       setCsvFile(null);
     } catch (error) {
       console.error("Error uploading CSV file:", error);
