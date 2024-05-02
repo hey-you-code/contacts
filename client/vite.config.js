@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://contacts-api.onrender.com",
+        target: "https://contacts-api-p91s.onrender.com",
         changeOrigin: true,
       },
     },
