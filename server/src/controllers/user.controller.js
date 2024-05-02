@@ -54,7 +54,6 @@ const uploadCsvFile = async (req, res) => {
     return res.status(200).send({ message: "Successfully uploaded!" });
   } catch (error) {
     console.error("Error uploading file:", error);
-    fs.unlinkSync(req.file.path);
     return res.status(500).send({
       message: "An error occurred during file upload",
       error: error.message,
