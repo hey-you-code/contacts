@@ -49,7 +49,7 @@ const uploadCsvFile = async (req, res) => {
 
     await User.insertMany(users);
 
-    fs.unlinkSync(req.file.path);
+    // fs.unlinkSync(req.file.path);
 
     return res.status(200).send({ message: "Successfully uploaded!" });
   } catch (error) {
